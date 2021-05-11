@@ -3,7 +3,7 @@ api = "0.5"
 [buildpack]
 id = "cage1016/github-assets-cnb"
 name = "Download Github Assets"
-version = "1.0.0"
+version = "1.1.0"
 homepage = "https://github.com/cage1016/github-assets-cnb"
 description = "Download Github Assets"
 keywords = ["github", "assets", "cnb"]
@@ -26,6 +26,9 @@ id = "io.buildpacks.stacks.bionic"
 
 [[stacks]]
 id = "io.buildpacks.samples.stacks.bionic"
+
+[[stacks]]
+id = "io.paketo.stacks.tiny"
 
 [[stacks]]
 id = "heroku-18"
