@@ -45,7 +45,7 @@ https://registry.buildpacks.io/buildpacks/cage1016/github-assets-cnb
 
 
 ```
-pack build myapp --buildpack cage1016/github-assets-cnb@1.0.0
+pack build myapp --buildpack cage1016/github-assets-cnb@1.1.0
 ```
 
 ### URI
@@ -58,6 +58,7 @@ urn:cnb:registry:cage1016/github-assets-cnb
 
 - google
 - io.buildpacks.stacks.bionic
+- io.paketo.stacks.tiny
 - io.buildpacks.samples.stacks.bionic
 - heroku-18
 - heroku-20
