@@ -3,7 +3,7 @@ api = "0.5"
 [buildpack]
 id = "cage1016/github-assets-cnb"
 name = "Download Github Assets"
-version = "1.1.0"
+version = "2.0.0"
 homepage = "https://github.com/cage1016/github-assets-cnb"
 description = "Download Github Assets"
 keywords = ["github", "assets", "cnb"]

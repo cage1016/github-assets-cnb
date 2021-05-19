@@ -15,38 +15,35 @@ https://registry.buildpacks.io/buildpacks/cage1016/github-assets-cnb
 
     ```bash
     cat <<EOF >> project.toml
-    # [[build.env]]
-    # optional, github token for private assets 
-    # name = "TOKEN"
-    # value = "<github-token>"
+    # [[metadata.githubasset]]
+    # repo = "GoogleContainerTools/skaffold"    # required
+    # token = ""                                # optional for private repo
+    # file = "skaffold-linux-amd64"             # required
+    # version = ""                              # optional, default set to "latest"
+    # target = "skaffold"                       # optional, default set to file name
+    # untarpath = ""                            # optional, default set to asset layer (".gz", ".sz", ".xz", ".lz4", "tgz", "zip", ".tar", ".bz2")
 
-    # skaffold
-    [[build.env]]
-    # required
-    name = "REPO"
-    value = "GoogleContainerTools/skaffold"
+    [[metadata.githubasset]]
+    repo = "eugeneware/ffmpeg-static"
+    file = "linux-x64"
+    target = "ffmpeg"
 
-    [[build.env]]
-    # required
-    name = "FILE"
-    value = "skaffold-linux-amd64"
-
-    [[build.env]]
-    # optional, default set to FILE value
-    name = "TARGET"
-    value = "skaffold"
-
-    [[build.env]]
-    # optional, default set to 'latest'
-    name = "VERSION"
-    value = "v1.22.0"
+    [[metadata.githubasset]]
+    repo = "kkdai/youtube"
+    file = "youtubedr_2.7.0_linux_arm64.tar.gz"
+    untarpath = "bin"
     EOF
     ```
 
+1. Build container image
 
-```
-pack build myapp --buildpack cage1016/github-assets-cnb@1.1.0
-```
+    ```
+    pack build myapp --buildpack cage1016/github-assets-cnb@2.0.0
+    ```
+
+1. Check `/layers/cage1016_github-assets-cnb`
+
+    ![](snipaste.png)
 
 ### URI
 
