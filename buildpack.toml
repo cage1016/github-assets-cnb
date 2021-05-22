@@ -1,0 +1,34 @@
+api = "0.5"
+
+[buildpack]
+id = "cage1016/github-assets-cnb"
+name = "Download Github Assets"
+version = "2.1.0"
+homepage = "https://github.com/cage1016/github-assets-cnb"
+description = "Download Github Assets"
+keywords = ["github", "assets", "cnb"]
+
+[metadata]
+  include-files = ["bin/run","bin/build","bin/detect","buildpack.toml"]
+  pre-package = "./scripts/build.sh"
+
+[[buildpack.licenses]]
+type = "MIT"
+
+[[stacks]]
+id = "google"
+
+[[stacks]]
+id = "io.buildpacks.stacks.bionic"
+
+[[stacks]]
+id = "io.buildpacks.samples.stacks.bionic"
+
+[[stacks]]
+id = "io.paketo.stacks.tiny"
+
+[[stacks]]
+id = "heroku-18"
+
+[[stacks]]
+id = "heroku-20"

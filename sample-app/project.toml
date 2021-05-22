@@ -1,0 +1,60 @@
+[project]
+id = "io.buildpacks.my-app"
+version = "0.1"
+
+[build]
+exclude = [
+    "README.md",
+    "buildpack",
+    "Makefile",
+    ".history",
+    ".devcontainer",
+    ".gitignore"    
+]
+
+[[build.buildpacks]]
+uri = "buildpack"
+
+# [[build.env]]
+# name = "GITHUB_ASSETS_PATH"
+# value = "aa.toml"
+
+# [[metadata.githubassets]]
+# repo = "eugeneware/ffmpeg-static"
+# asset = "linux-x64"
+# destination = "bin/ffmpeg"
+
+# [[metadata.githubassets]]
+# repo = "kkdai/youtube"
+# asset = "youtubedr_2.7.0_linux_arm64.tar.gz"
+# destination = "bin"
+
+# [[metadata.githubassets]]
+# repo = "nats-io/go-nats-examples"
+# asset = "go-nats-examples-v0.1.0-linux-amd64.zip"
+# destination = "bin"
+
+# [[metadata.githubassets]]
+# repo = "BtbN/FFmpeg-Builds"
+# asset = "ffmpeg-N-102569-g36b16a30db-linux64-gpl-shared.tar.xz"
+# strip_components = 1
+
+# [[metadata.githubassets]]
+# repo = "stedolan/jq"
+# asset = "jq-linux64"
+# destination = "bin/jq"
+
+# [[metadata.githubassets]]
+# repo = "GoogleContainerTools/skaffold"
+# asset = "skaffold-linux-amd64"
+# destination = "bin/skaffold"
+
+[[metadata.githubassets]]
+repo = "kkdai/youtube"
+asset = "youtubedr_2.7.0_linux_arm64.tar.gz"
+destination = "bin"
+
+[[metadata.githubassets]]
+repo = "stedolan/jq"
+asset = "jq-linux64"
+destination = "bin/jq"

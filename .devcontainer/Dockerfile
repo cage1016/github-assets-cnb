@@ -8,5 +8,8 @@ USER root
 RUN add-apt-repository ppa:cncf-buildpacks/pack-cli
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends pack-cli
+
+RUN wget https://github.com/wagoodman/dive/releases/download/v0.9.2/dive_0.9.2_linux_amd64.deb
+RUN sudo apt install ./dive_0.9.2_linux_amd64.deb && rm /dive_0.9.2_linux_amd64.deb
 #
 USER codespace
